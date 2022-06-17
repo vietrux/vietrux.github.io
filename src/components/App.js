@@ -15,7 +15,7 @@ function App() {
       <div className="card">
         <img className="card-img" src={props.thumb_nail} alt="Thumbnail" />
         <h4 className="card-info">{props.name}</h4>
-        <a href={'https://vietrux.github.io/HTML-CSS-JS-Editor/?id='+props._id}>
+        <a href={'https://vietrux.github.io/HTML-CSS-JS-Editor/?id='+props.id}>
           <div className="overlay">
             <h4>
               VIEW CODE
