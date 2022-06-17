@@ -40,7 +40,7 @@ function App() {
           {data.map(item => (
             <Card
               key={item.id}
-              id={item.id}
+              id={item._id}
               name={item.name}
               thumb_nail={item.thumb_nail}
             />
