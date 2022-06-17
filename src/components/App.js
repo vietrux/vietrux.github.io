@@ -7,15 +7,25 @@ function App() {
   }
   const [data, setData] = useState([]);
   useEffect(() => {
-    getData().then(data => setData(data));
+    getData().then(data => {
+      setData(data);
+      document.getElementsByClassName("mainn")[0].style.display = "none";
+      document.getElementsByClassName("content")[0].style.display = "block";
+    });
   }, []);
-
+  useEffect(() => {
+    var meter = document.getElementById("meter");
+    meter.addEventListener("animationend", function () {
+      document.getElementsByClassName("dashboard")[0].style.display = "none";
+      document.getElementsByClassName("content")[0].style.display = "block";
+    });
+  }, []);
   function Card(props) {
     return (
       <div className="card">
         <img className="card-img" src={props.thumb_nail} alt="Thumbnail" />
         <h4 className="card-info">{props.name}</h4>
-        <a href={'https://trug.is-a.dev/HTML-CSS-JS-Editor/?id='+props.id}>
+        <a href={'https://trug.is-a.dev/HTML-CSS-JS-Editor/?id=' + props.id}>
           <div className="overlay">
             <h4>
               VIEW CODE
@@ -29,6 +39,19 @@ function App() {
 
   return (
     <>
+      <div className="dashboard">
+        <svg>
+          <circle className="bg" cx="57" cy="57" r="52" />
+          <circle id="meter" className="meter" cx="57" cy="57" r="52" />
+        </svg>
+      </div>
+      <div className="mainn">
+        <div className="a">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+
       <div className="content">
         <p style={{ fontWeight: "700", fontSize: "36px", background: "black", padding: "20px" }}>
           BasicWeb Portfolio

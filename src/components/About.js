@@ -1,4 +1,12 @@
+import{ useEffect } from 'react';
 function About() {
+    useEffect(() => {
+        var meter = document.getElementById("meter");
+        meter.addEventListener("animationend", function () {
+          document.getElementsByClassName("dashboard")[0].style.display = "none";
+          document.getElementsByClassName("content")[0].style.display = "block";
+        });
+      }, []);
     const info = {
         name: "Lê Việt Trung",
         summary: "I'm Lê Việt Trung, a full stack developer with 1 years of experience in algorithm and 3 months of experience in MERN stack. ",
@@ -31,6 +39,12 @@ function About() {
     };
     return (
         <>
+            <div className="dashboard">
+                <svg>
+                    <circle className="bg" cx="57" cy="57" r="52" />
+                    <circle id="meter" className="meter" cx="57" cy="57" r="52" />
+                </svg>
+            </div>
             <div className="content">
                 <h1>About</h1>
                 <h2>Summary</h2>
