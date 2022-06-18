@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 function App() {
   async function getData() {
-    const response = await axios.get("https://vtxapi.herokuapp.com/api/all");
+    const response = await axios.get("https://vtxapi.herokuapp.com/api/allid");
     return response.data;
   }
   const [data, setData] = useState([]);
