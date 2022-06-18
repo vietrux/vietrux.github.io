@@ -10,7 +10,6 @@ function App() {
     getData().then(data => {
       setData(data);
       document.getElementsByClassName("mainn")[0].style.display = "none";
-      document.getElementsByClassName("content")[0].style.display = "block";
     });
   }, []);
   useEffect(() => {
