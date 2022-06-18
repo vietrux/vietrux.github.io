@@ -22,9 +22,9 @@ function App() {
   function Card(props) {
     return (
       <div className="card">
-        <img className="card-img" src={props.thumb_nail} alt="Thumbnail" />
-        <h4 className="card-info">{props.name}</h4>
         <a href={'https://trug.is-a.dev/HTML-CSS-JS-Editor/?id=' + props.id}>
+          <img className="card-img" src={props.thumb_nail} alt="Thumbnail" />
+          <h4 className="card-info">{props.name}</h4>
           <div className="overlay">
             <h4>
               VIEW CODE
