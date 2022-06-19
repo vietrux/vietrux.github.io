@@ -1,4 +1,8 @@
+import { useEffect } from "react";
 function Contact() {
+    useEffect(() => {
+        document.getElementsByClassName("content")[0].style.display = "block";
+    }, []);
     return (
         <>
             <div className="content">

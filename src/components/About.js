@@ -1,5 +1,8 @@
 import{ useEffect } from 'react';
 function About() {
+    useEffect(() => {
+        document.getElementsByClassName("content")[0].style.display = "block";
+    }, []);
     const info = {
         name: "Lê Việt Trung",
         summary: "I'm Lê Việt Trung, a full stack developer with 1 years of experience in algorithm and 3 months of experience in MERN stack. ",
