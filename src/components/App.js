@@ -13,12 +13,6 @@ function App() {
       document.getElementsByClassName("content")[0].style.display = "block";
     });
   }, []);
-  useEffect(() => {
-    var meter = document.getElementById("meter");
-    meter.addEventListener("animationend", function () {
-      document.getElementsByClassName("dashboard")[0].style.display = "none";
-    });
-  }, []);
   function Card(props) {
     return (
       <div className="card">
@@ -38,12 +32,6 @@ function App() {
 
   return (
     <>
-      <div className="dashboard">
-        <svg>
-          <circle className="bg" cx="57" cy="57" r="52" />
-          <circle id="meter" className="meter" cx="57" cy="57" r="52" />
-        </svg>
-      </div>
       <div className="mainn">
         <div className="a">
           <div></div>

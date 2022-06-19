@@ -125,28 +125,6 @@ svg {
   stroke: #1a2c34;
 }
 
-.meter {
-  stroke-dasharray: 360;
-  stroke-dashoffset: 100;
-  stroke: aqua;
-  animation: progress 1s ease-out;
-  fill: none;
-  stroke-width: 10px;
-  stroke-linecap: round;
-  transform: rotate(-90deg);
-  transform-origin: 50% 50%;
-}
-
-@keyframes progress {
-  from {
-    stroke-dashoffset: 360;
-  }
-
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
 .mainpage {
   display: none;
 }
