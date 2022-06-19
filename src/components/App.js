@@ -10,13 +10,13 @@ function App() {
     getData().then(data => {
       setData(data);
       document.getElementsByClassName("mainn")[0].style.display = "none";
+      document.getElementsByClassName("content")[0].style.display = "block";
     });
   }, []);
   useEffect(() => {
     var meter = document.getElementById("meter");
     meter.addEventListener("animationend", function () {
       document.getElementsByClassName("dashboard")[0].style.display = "none";
-      document.getElementsByClassName("content")[0].style.display = "block";
     });
   }, []);
   function Card(props) {
