@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 function App() {
   async function getData() {
     const response = await axios.get("https://vtxapi.herokuapp.com/api/allid");
-    return response.data;
+    return response.data.reserve();
   }
   const [data, setData] = useState([]);
   useEffect(() => {
